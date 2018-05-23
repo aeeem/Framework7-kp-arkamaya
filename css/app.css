@@ -1,0 +1,49 @@
+/* Your app styles here */
+.ios .tabbar-labels .tab-link:not(.tab-link-active) .icon-ios-fill {
+  display: none;
+}
+.ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
+  display: none;
+}
+.popup_margin{
+  margin:auto;
+  text-align: center;
+  font-size:25px;
+}
+.login_user_pass{
+  text-align: left;
+  font-size: 18px;
+  margin-top: 4px;
+
+}
+.login_user_pass .user_pass_input{
+  text-align: center;
+  border-bottom:2px solid lightgrey;
+
+
+
+}
+.grid-con [class*="col"] {
+  background: #fff;
+  text-align: center;
+  color: #000;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+/*.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 435px;
+  margin: 10px;
+  text-align: center;
+  line-height: 300px;
+  font-size: 30px;
+}*/
