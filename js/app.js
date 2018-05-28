@@ -68,7 +68,7 @@ var settingsView = app.views.create('#view-settings', {
 $$('#my-login-screen .login-button').on('click', function () {
   var username= $$('#my-login-screen [name="username"]').val();
   var password= $$('#my-login-screen [name="password"]').val();
-  var myObj={user_email:'',user_password:'',};
+  var myObj={user_email:'',user_password:'',contentType:"application/json"};
   myObj.user_email=username;
   myObj.user_password=password;
   app.request.post(konstanta.api+'/Login',myObj , function (data) {
