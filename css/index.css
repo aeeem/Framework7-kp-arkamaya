@@ -58,7 +58,9 @@ body {
     margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
                                    /* offset horizontal: half of text area width */
 }
-
+.my-button.active-state {
+    color: blue;
+}
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
@@ -91,7 +93,26 @@ h1 {
     background-color:#333333;
     display:block;
 }
-
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+  }
+input{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    border-bottom: 2px solid #d3d3d3;
+ 
+}
+  
+.input:focus{
+    outline: none !important;
+     border-bottom :1px solid red;
+     
+  }
 .event.received {
     background-color:#4B946A;
     display:none;
@@ -113,3 +134,30 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+#root {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin: 1rem;
+    border: 1px solid gray;
+  }
+  
+  @media screen and (min-width: 600px) {
+    .card {
+      flex: 1 1 calc(50% - 2rem);
+    }
+  }
+  
+  @media screen and (min-width: 900px) {
+    .card {
+      flex: 1 1 calc(33% - 2rem);
+    }
+  }
+  

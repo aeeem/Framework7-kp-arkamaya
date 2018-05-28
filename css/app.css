@@ -5,6 +5,8 @@
 .ios .tabbar-labels .tab-link.tab-link-active .icon:not(.icon-ios-fill) {
   display: none;
 }
+
+
 .popup_margin{
   margin:auto;
   text-align: center;
@@ -17,12 +19,11 @@
 
 }
 .login_user_pass .user_pass_input{
-  text-align: center;
+  text-align: left;
   border-bottom:2px solid lightgrey;
 
-
-
 }
+
 .grid-con [class*="col"] {
   background: #fff;
   text-align: center;
@@ -33,6 +34,7 @@
   margin-top: 10px;
   font-size: 12px;
 }
+
 /*.flex-container {
   display: flex;
   flex-wrap: wrap;
