@@ -20,9 +20,9 @@
       <div class="statusbar"></div>
 
       <!-- Your main view, should have "view-main" class -->
-      <div class="view view-utama">
+      <div class="view view-dashboard">
         <!-- Initial Page, "data-name" contains page name -->
-        <div data-name="rumah" class="page">
+        <div data-name="dashboard" class="page">
 
           <!-- Top Navbar -->
           <div class="navbar">
@@ -44,14 +44,16 @@
           <div class="page-content">
             <p>Page content goes here</p>
             <!-- Link to another page -->
-            <a href="/about/">About app</a>
+            <div id="hahahaha">
+              <a href="#" class="item-link logingout">logout app</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="framework7/js/framework7.min.js"></script>
+    <script  src="framework7/js/framework7.min.js"></script>
     <!-- Path to your app js-->
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
   </body>
 </html>

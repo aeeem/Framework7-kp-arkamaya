@@ -8,8 +8,8 @@ routes = [
     url: './pages/presensi.html',
   },
   {
-    path: '/homepage/',
-    url: './pages/Homepage.html',
+    path: '/dashboard/',
+    url: './pages/dashboard.html',
   },
   {
     path: '/profil/',
