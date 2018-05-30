@@ -62,6 +62,7 @@ var homeView = app.views.create('#view-home', {
 var settingsView = app.views.create('#view-settings', {
   url: '/settings/'
 });
+var rumah = app.addView('.view-utama');
 
 
 
@@ -69,14 +70,14 @@ $$('#my-login-screen .login-button').on('click', function () {
   var username= $$('#my-login-screen [name="username"]').val();
   var password= $$('#my-login-screen [name="password"]').val();
   var myObj={user_email:null,user_password:null,ContentType:"application/javascript",charset:'UTF-8',};
-  // console.log(myObj);
+
   
   myObj.user_email=username;
   myObj.user_password=password;
   app.request.post(konstanta.api+'/Login' ,myObj, function (data) {
 //jika berhasil post
-    console.log('dokumen');
-    var dokumen = JSON.stringify(data);
+
+    var dokumen = JSON.parse(data);
     
     //cek apakah login berhasil ataau tidak, jika berhasil maka akan mengembalikan nilai true
     if(!dokumen.status){
@@ -84,10 +85,11 @@ $$('#my-login-screen .login-button').on('click', function () {
     }
     /////////menampilkan pesan dari api dan menyimpan session kedalam local storage
     else{
-      console.log(dokumen);
+
     app.dialog.alert(dokumen.message);
     dokumen.data.forEach(data => {
       konstanta.storage.setItem('session_id',data.session_id); 
+   
     });
   }
   },function(data){
