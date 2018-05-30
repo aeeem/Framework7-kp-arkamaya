@@ -68,12 +68,16 @@ var settingsView = app.views.create('#view-settings', {
 $$('#my-login-screen .login-button').on('click', function () {
   var username= $$('#my-login-screen [name="username"]').val();
   var password= $$('#my-login-screen [name="password"]').val();
-  var myObj={user_email:'',user_password:'',contentType:"application/json"};
+  var myObj={user_email:null,user_password:null,ContentType:"application/javascript",charset:'UTF-8',};
+  // console.log(myObj);
+  
   myObj.user_email=username;
   myObj.user_password=password;
-  app.request.post(konstanta.api+'/Login',myObj , function (data) {
-    var dokumen = JSON.parse(data);
-    console.log(dokumen);
+  app.request.post(konstanta.api+'/Login' ,myObj, function (data) {
+//jika berhasil post
+    console.log('dokumen');
+    var dokumen = JSON.stringify(data);
+    
     //cek apakah login berhasil ataau tidak, jika berhasil maka akan mengembalikan nilai true
     if(!dokumen.status){
       app.dialog.alert(dokumen.message);
@@ -86,8 +90,12 @@ $$('#my-login-screen .login-button').on('click', function () {
       konstanta.storage.setItem('session_id',data.session_id); 
     });
   }
-  
+  },function(data){
+    //jika gagal post
+    var message=JSON.parse(data.responseText);
+    app.dialog.alert(message.message);
   });
+
   });
 
 
